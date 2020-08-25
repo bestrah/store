@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block content %}
+
+    <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="card">
+           <div class="card-body">
+
+               <div class="text-center">
+
+                   <a class="btn btn-success" href="{% url 'account_email' %}">Add Email</a><br><br>
+                   <a class="btn btn-success" href="{% url 'account_change_password' %}">Password Change</a><br><br>
+                   <a class="btn btn-success" href="{% url 'account_reset_password' %}">Password Reset</a><br><br>
+                   <a class="btn btn-success" href="{% url 'shop:orders' %}">Your Orders</a>
+               </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+
+
+{% endblock content %}

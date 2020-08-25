@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Callback{% endblock title %}
+{% block content %}
+    <h1 class="text-center"> Payment Detail</h1>
+    <div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 order-detail">
+                <div class="section-title text-center">
+                    <h3 class="title">Thank You</h3>
+
+                </div>
+                <div class="order-summary">
+                    <p>Your Invoice Number : {{ invoice.id }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+{% endblock content %}
+

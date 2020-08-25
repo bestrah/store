@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Orders{% endblock title %}
+{% block content %}
+    <h1 class="text-center">Your Orders</h1>
+        <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="card">
+           <div class="card-body">
+    {% for order in orders %}
+    {% if order.payed %}
+    <p class="row btn btn-success">Paid : {{ order.payed }}</p>
+    <p>Order id :{{ order.id }}</p>
+    <p class="btn">Address :{{ order.address.name }} , {{ order.address.mobile }}</p>
+               <hr>
+    {% else %}
+                <p class="row btn btn-danger">Paid : {{ order.payed }}</p>
+    <p>Order id :{{ order.id }}</p>
+    <p class="btn">Address : {{ order.address.address }}, {{ order.address.name }} , {{ order.address.mobile }}</p>
+    <hr>
+               {% endif %}
+           {% empty %}
+           <p class="btn btn-primary">No Orders Yet</p>
+           {% endfor %}
+           </div>
+           </div>
+           </div>
+           </div>
+{% endblock content %}
