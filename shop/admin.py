@@ -1,5 +1,4 @@
 from django.contrib import admin
-test 3
 from . import models
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):
