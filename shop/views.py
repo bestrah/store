@@ -81,7 +81,7 @@ def order_detail(request, order_id):
     order = get_object_or_404(models.Order, id=order_id)
     return render(request, 'order_detail.html', {'order': order})
 
-MERCHANT='a15fd830-9d87-40aa-aeaa-0688177f47c5'
+MERCHANT='*******************'
 client=Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
 def to_bank(request,order_id):
     order=get_object_or_404(models.Order,id=order_id)
